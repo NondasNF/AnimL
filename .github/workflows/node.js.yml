@@ -38,6 +38,9 @@ jobs:
       run: npm install
 
     - name: Build
+      run: cd client
+      
+    - name: Enter in the directory
       run: npm run build
 
     - name: Deploy
