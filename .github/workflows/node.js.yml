@@ -32,16 +32,14 @@ jobs:
       run: npm install
       
     - name: Enter in the directory
-      run: cd client
-      
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Enter in the directory
-      run: cd client
+      run: |
+        cd client
+        npm install
       
     - name: Build
-      run: npm run build
+      run: |
+       cd client
+       npm run build
 
     - name: Deploy
       run: |
