@@ -36,7 +36,10 @@ jobs:
       
     - name: Install dependencies
       run: npm install
-
+      
+    - name: Enter in the directory
+      run: cd client
+      
     - name: Build
       run: npm run build
 
