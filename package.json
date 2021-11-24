@@ -5,6 +5,9 @@
   "main": "index.js",
   "homepage": "https://es2-ufpi.github.io/AnimL/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "react-scripts build",
     "client": "npm start --prefix client",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \" npm run client\"",
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "cypress": "^8.7.0",
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.13"
   }
 }
